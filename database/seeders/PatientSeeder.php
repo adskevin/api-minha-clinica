@@ -14,7 +14,7 @@ class PatientSeeder extends Seeder
      */
     public function run()
     {
-        Patient::truncate();
+        // Patient::truncate();
 
         $faker = \Faker\Factory::create('pt_BR');
 
