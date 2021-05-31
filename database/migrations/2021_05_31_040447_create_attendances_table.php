@@ -15,8 +15,10 @@ class CreateAttendancesTable extends Migration
     {
         Schema::create('attendances', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('patient_id');
             $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');
-            $table->foreign('professional_id')->references('id')->on('professional')->onDelete('cascade');
+            $table->unsignedBigInteger('professional_id');
+            $table->foreign('professional_id')->references('id')->on('professionals')->onDelete('cascade');
             $table->timestamps();
         });
     }
