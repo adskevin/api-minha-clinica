@@ -14,7 +14,7 @@ class ProcedureSeeder extends Seeder
      */
     public function run()
     {
-        Procedure::truncate();
+        // Procedure::truncate();
 
         $procedures = array(
             'CONSULTA EM CONSULTORIO - CLINICO GERAL E ESPECIALIDADES',
